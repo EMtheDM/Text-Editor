@@ -16,7 +16,7 @@ const initdb = async () =>
 export const putDb = async (content) => { console.error('putDb not implemented');
 
   const jateDb = await openDB('jate', 1);
-  const tx = jatedB.transaction('jate', 'readwrite');
+  const tx = jateDb.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
   const request = store.put({ id: 1, value: content });
   const result = await request;
